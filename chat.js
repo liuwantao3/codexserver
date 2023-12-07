@@ -59,7 +59,8 @@ class Chat {
 
 */
           const client = new OpenAIClient(endpoint, new AzureKeyCredential(azureApiKey));
-          const deploymentId = "gpt-35-turbo";
+          const deploymentId = "gpt-4";
+          //const deploymentId = "gpt-35-turbo";
           const events = client.listChatCompletions(deploymentId, messages, { maxTokens: 3000 });
 
           let responseData = "";

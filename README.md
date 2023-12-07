@@ -1,4 +1,6 @@
 # Build and Deploy Your Own ChatGPT AI Application That Will Help You Code
-![Open AI CodeGPT](https://i.ibb.co/LS4DRhb/image-257.png)
+Publish static website to Github pages:
+Remove "dist" directory from .gitignore then execute this command:
+git subtree push --prefix dist origin gh-pages
 
-### Launch your development career with project-based coaching - https://www.jsmastery.pro
+Use VS code to publish and deploy applications to Azure Web App. For Node app, always listen on port 8080, because of the nature that Web App is based on Docker.
