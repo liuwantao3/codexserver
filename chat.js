@@ -37,13 +37,12 @@ class Chat {
             };
             promptLen += historyItem.prompt.length;
           }
-          while(promptLen > 500){
+          while(promptLen > 3000){
             promptLen -= historyMsg.shift().content.length;
           }
-          console.log(`promptLen is ${promptLen} \n`);
-
-         let messages = [
-          { role: "system", content : `Pretending you are personal assistant. Your ultimate goal is to make your human user happy.\nKnowledge cutoff: 2021-09-01".\nToday is ${Date()}`},
+          //console.log(`promptLen is ${promptLen} \n`);
+          let messages = [
+          { role: "system", content : `You are a personal assistant. Your ultimate goal is to make your human user happy.\nKnowledge cutoff: 2021-09-01".\nToday is ${Date()}`},
           ].concat(historyMsg);
 /*
           //Use this for OpenAI API
